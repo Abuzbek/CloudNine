@@ -10,6 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "gsap": "^3.5.1",
+    "jquery": "^3.5.1",
+    "particles.js": "^2.0.0",
     "swiper": "^6.3.4",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
