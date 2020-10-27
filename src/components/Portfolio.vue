@@ -26,41 +26,8 @@
 
 <script>
 // import $ from 'jquery'
-import { gsap } from 'gsap';
-import { CSSPlugin } from 'gsap/CSSPlugin'
-gsap.registerPlugin(CSSPlugin);
- 
-const card = [
-  {
-    _id:'1',
-    img: require('../assets/cardSvg/card2.svg'),
-    heading:'Веб-сайты',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis ',
-    price: 'от 1000 $'
-  },
-  {
-    _id:'2',
-    img: require('../assets/cardSvg/card3.svg'),
-    heading:'Приложения',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis ',
-    price: 'от 1000 $'
-  },
-  {
-    _id:'3',
-    img: require('../assets/cardSvg/card1.svg'),
-    heading:'Телеграм боты',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis ',
-    price: 'от 1000 $'
-  },
-  {
-    _id:'4',
-    img: require('../assets/cardSvg/card4.svg'),
-    heading:'SEO оптимизация',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis ',
-    price: 'от 1000 $'
-  },
-] 
-
+import Swiper from 'swiper'
+import Swiper from 'swiper'
 export default {
   name: 'Skill',
   data(){

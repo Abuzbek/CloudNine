@@ -25,11 +25,11 @@
                       <button v-ripple class="btn btn-primary">Начать проект</button>
                       <div class="social">
                         <div class="phone d-flex align-items-center">
-                          <a class="btn-floating btn-sm btn-ph waves-effect waves-light" type="button" role="button"><i class="fas fa-phone"></i></a>
-                          <a href="#!" class="phone">+998 99 012 34 56</a>
+                          <a class="btn-floating btn-sm btn-ph waves-effect waves-light" type="button" role="button"><i  style="transform:rotateY(180deg);" class="fas fa-phone"></i></a>
+                          <a href="tel:+998990395709" class="phone">+998 99 039 57 09</a>
                       </div>
                        <div class="phone d-flex align-items-center">
-                          <a class="btn-floating btn-sm btn-tw waves-effect waves-light" type="button" role="button"><i class="fab fa-twitter"></i></a>
+                          <a class="btn-floating btn-sm btn-tw waves-effect waves-light" type="button" role="button"><i class="fab fa-youtube"></i></a>
                           <a class="btn-floating btn-sm btn-fb waves-effect waves-light" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
                           <a class="btn-floating btn-sm btn-tg waves-effect waves-light" type="button" role="button"><i class="fab fa-telegram-plane"></i></a>
                           <a class="btn-floating btn-sm btn-in waves-effect waves-light" type="button" role="button"><i class="fab fa-instagram"></i></a>
@@ -45,7 +45,7 @@
 <script>
 import '../assets/css/bootstrap.min.css'
 // import $ from 'jquery'
-import particlesJS from 'particles.js'
+// import particlesJS from 'particles.js'
 import { gsap } from 'gsap';
 import { CSSPlugin } from 'gsap/CSSPlugin'
 gsap.registerPlugin(CSSPlugin);
@@ -58,116 +58,6 @@ export default {
       tl.from('.header_title p', {duration:0.9, x:100, opacity:0,stagger:.4})
       tl.from('.social', {duration:0.9, y:100, opacity:0,stagger:.4})
       tl.to('.right_circle img', {duration:1, clipPath: "inset(0 0 0 0)"})
-      particlesJS("particles-js", {
-        "particles": {
-            "number": {
-            "value": 100,
-            "density": {
-                "enable": true,
-                "value_area": 800
-            }
-            },
-            "color": {
-            "value": "#2824EA"
-            },
-            "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#2824EA"
-            },
-            "polygon": {
-                "nb_sides": 5
-            },
-            "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-            }
-            },
-            "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-            },
-            "size": {
-            "value": 3,
-            "random": true,
-            "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-            }
-            },
-            "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#2824EA",
-            "opacity": 0.4,
-            "width": .3
-            },
-            "move": {
-            "enable": true,
-            "speed": 6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "grab"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-            },
-            "modes": {
-            "grab": {
-                "distance": 140,
-                "line_linked": {
-                "opacity": 1
-                }
-            },
-            "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-            },
-            "repulse": {
-                "distance": 200,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 4
-            },
-            "remove": {
-                "particles_nb": 2
-            }
-        }
-    },
-    "retina_detect": true
-    });
   }
 }
 </script>
@@ -193,6 +83,7 @@ header{
     position: relative;
     overflow: hidden;
     padding-bottom: 15px;
+    height: 100vh;
 }
 header .cloud_absolute{
     position: absolute;
@@ -263,7 +154,7 @@ header .header_title p {
     background-color: #3B5998 !important;
 }
 .btn-tw {
-    background-color: #26A6D1 !important;
+    background-color: red !important;
 }
 .btn-in {
     background-color: #E1447A !important;
@@ -294,11 +185,14 @@ header .right_circle .full{
     overflow: hidden;
     margin-left: 30px;
     border:40px solid #DBDBDB;
+    background: #323232;
 }
 header .right_circle img{
     transform: translateY(210px);
     clip-path:inset(0 0 100% 0);
+    width: 57%;
     transition: 1s;
+    object-fit: cover;
 }
 header .full #particles-js{
     position: absolute;
