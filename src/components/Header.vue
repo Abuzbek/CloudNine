@@ -76,7 +76,7 @@ export default {
   background: #ffffff;
 }
 header .header_title{
-  padding-top:100px;
+  padding-top:80px;
   margin-top: 50px;
 }
 header{

@@ -15,7 +15,7 @@
                         </div>
                         <div class="card-body">
                             <p>{{ n.title }}</p>
-                            <a href="#!" class="btn btn-outline-primary">Заказать</a>
+                            <a href="#!" v-ripple class="btn btn-outline-primary">Заказать</a>
                         </div>
                     </div>
                 </div>
