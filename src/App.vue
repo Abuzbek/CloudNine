@@ -1,50 +1,50 @@
 <template>
-  <v-app>
-    <Navbar :title="navItem" />
-    <Header />
-    <Skill />
-    <WriteUs />
-  </v-app>
+  <div id="app">
+    <Navbar  :title="navItem"/>
+    <Header/>
+    <Skill/>
+    <Portfolio/>
+  </div>
 </template>
 
 <script>
-  import Navbar from './components/Navbar.vue';
-  import Header from './components/Header.vue';
-  import Skill from './components/Skill.vue';
-  import WriteUs from './components/WriteUs';
+import Navbar from './components/Navbar.vue'
+import Header from './components/Header.vue'
+import Skill from './components/Skill.vue'
+import Portfolio from './components/Portfolio.vue'
 
-  export default {
-    name: 'App',
-    components: {
-      Navbar,
-      Header,
-      Skill,
-      WriteUs,
-    },
-    data: () => ({
-      //
-    }),
-  };
+
+export default {
+  name: 'App',
+  components: {
+    Navbar,Header,Skill,Portfolio
+  },
+  data () {
+    return {
+      // 
+    }
+  }
+}
 </script>
 
 <style>
-  /*  =======================  components  ===============  */
-  .navbar-collapse {
-    flex-basis: 0% !important;
-  }
-  .navbar-nav {
-    flex-direction: row !important;
-  }
-  .nav-link {
+/*  =======================  components  ===============  */
+.navbar-collapse{
+  flex-basis: 0% !important;
+}
+.navbar-nav{
+  flex-direction: row !important;
+}
+.nav-link {
     display: block;
-    padding: 0.5rem 1rem !important;
+    padding: .5rem 1rem !important;
     color: #2a2a2a;
-  }
-  .nav-link.active {
+}
+.nav-link.active {
     font-weight: 700;
-  }
-  /*  =======================  components  ===============  */
-  body {
-    font-family: 'Montserrat', sans-serif;
-  }
+}
+/*  =======================  components  ===============  */
+body{
+  font-family: 'Montserrat', sans-serif;
+}
 </style>

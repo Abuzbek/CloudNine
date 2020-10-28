@@ -7,7 +7,9 @@
       hide-details="auto"
       class="mx-16"
     ></v-text-field>
-    <v-text-field label="Another input" class="mx-16"></v-text-field>
+    <v-text-field label="Another input"
+      :rules="rules"
+      hide-details="auto" class="mx-16"></v-text-field>
   </div>
 </template>
 
