@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="home">
       <div class="container">
           <div class="cloud_absolute">
             <svg class="cloud" width="195" height="195" viewBox="0 0 195 195" fill="none" xmlns="http://www.w3.org/2000/svg">

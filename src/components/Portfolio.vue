@@ -1,17 +1,12 @@
 <template>
-    <section class="portfolio">
+    <section class="portfolio" id="skill">
         <div class="container-fluid">
             <swiper class="swiper" :options="swiperOption">
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
-                <swiper-slide></swiper-slide>
+                <swiper-slide v-for="(n, i) in card" :key="n._id">
+                  <a :href="n.link" class="wrapper">
+                    <img :src="n.img" :alt="i">
+                  </a>
+                </swiper-slide>
                 <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
         </div>
@@ -22,12 +17,17 @@
   import swiperCore, {Pagination} from 'swiper'
   import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
   import '../assets/css/swiper.css'
+  import { mapGetters } from 'vuex'
   swiperCore.use([Pagination])
   export default {
     name: 'Portfolio',
     components: {
       Swiper,
       SwiperSlide
+    },
+    computed: mapGetters(['card']),
+    mounted () {
+      this.$store.dispatch('fetchCard')
     },
     data() {
       return {
@@ -57,6 +57,21 @@ section.portfolio{
       height: 270px;
       background: #eee;
       border: 1px solid rgb(119, 34, 34);
+   }
+   .swiper-slide .wrapper img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: .3s ease-in-out;
+   }
+   .swiper-slide .wrapper{
+     display: block;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+   }
+   .swiper-slide .wrapper:hover img{
+     transform: scale(1.3) rotate(15deg);
    }
    .swiper-pagination{
        align-items: center;
