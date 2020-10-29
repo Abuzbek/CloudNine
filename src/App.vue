@@ -3,46 +3,55 @@
     <Navbar :title="navItem" />
     <Header />
     <Skill />
-    <WriteUs />
+    <div class="infoSection">
+      <WriteUs class="writeUs" />
+      <Map class="map" />
+    </div>
   </v-app>
 </template>
 
 <script>
-  import Navbar from './components/Navbar.vue';
-  import Header from './components/Header.vue';
-  import Skill from './components/Skill.vue';
-  import WriteUs from './components/WriteUs';
+import Navbar from './components/Navbar.vue';
+import Header from './components/Header.vue';
+import Skill from './components/Skill.vue';
+import WriteUs from './components/WriteUs';
+import Map from './components/Map';
+// import TeamMemberCard from './components/TeamMemberCard';
 
-  export default {
-    name: 'App',
-    components: {
-      Navbar,
-      Header,
-      Skill,
-      WriteUs,
-    },
-    data: () => ({
-      //
-    }),
-  };
+export default {
+  name: 'App',
+  components: {
+    // TeamMemberCard,
+    Map,
+    Navbar,
+    Header,
+    Skill,
+    WriteUs,
+  },
+  data: () => ({
+    //
+  }),
+};
 </script>
 
 <style>
   /*  =======================  components  ===============  */
-  .navbar-collapse {
-    flex-basis: 0% !important;
+
+  .infoSection {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 10%;
   }
-  .navbar-nav {
-    flex-direction: row !important;
+
+  .writeUs {
+    width: 40%;
   }
-  .nav-link {
-    display: block;
-    padding: 0.5rem 1rem !important;
-    color: #2a2a2a;
+
+  .map {
+    width: 60%;
   }
-  .nav-link.active {
-    font-weight: 700;
-  }
+
+
   /*  =======================  components  ===============  */
   body {
     font-family: 'Montserrat', sans-serif;
