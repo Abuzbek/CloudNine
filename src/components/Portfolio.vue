@@ -40,6 +40,7 @@
       return {
         swiperOption: {
           slidesPerView: 3,
+          slidesPerColumn: 3,
           pagination: {
             el: '.swiper-pagination',
             clickable: true
@@ -51,15 +52,18 @@
             },
             768: {
               slidesPerView: 2,
-              slidesPerColumn: 3,
+              slidesPerColumn: 2,
+              centeredSlides: true,
             },
             640: {
               slidesPerView: 2,
-              slidesPerColumn: 3,
+              slidesPerColumn: 2,
+              centeredSlides: true,
             },
             320: {
               slidesPerView: 1,
-              slidesPerColumn: 4,
+              slidesPerColumn: 2,
+              centeredSlides: true,
             }
           }
         }

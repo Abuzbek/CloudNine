@@ -201,4 +201,86 @@ header .full #particles-js{
     height: 100%;
     z-index: 30;
 }
+@media (max-width:1264px) {
+    header{
+      height: auto;
+    }
+    header .header_title h1 {
+      font-size: 40px;
+      line-height: 55px;
+      font-weight: 800;
+      color: #2a2a2a;
+    }
+    header .right_circle {
+        position: absolute;
+        width: 1305px;
+        height: 1368px;
+        left: 681px;
+        top: -319px;
+        border-radius: 50%;
+        border: 10px solid #4200FF;
+        overflow: hidden;
+    }
+}
+@media (max-width:1199px) {
+   header .right_circle {
+        left: 40%;
+        border: 0px solid #4200FF;
+    }
+    header .header_title p {
+        max-width: 379px;
+    }
+}
+@media (max-width:991px) {
+   header .right_circle {
+        width: 100%;
+        height: 100%;
+        left:0;
+        top:0;
+        border: none;
+    }
+    header .right_circle .full {
+        display: none;
+    }
+    header .header_title{
+        padding-top: 80px;
+        margin-top: 50px;
+        padding-left: 100px;
+    }
+}
+@media (max-width:767px) {
+    header .header_title{
+        padding-top: 80px;
+        margin-top: 50px;
+        padding-left: 0;
+    }
+}
+@media (max-width:575px) {
+    header .header_title{
+       text-align: center;
+    }
+    header .header_title p {
+        max-width: 379px;
+        margin: 25px auto;
+    }
+    header .header_title .socialIcon, header .header_title .phone{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header .header_title .phone a.phone {
+        font-size: 24px;
+        font-weight: 300;
+        color: #2a2a2a;
+    }
+    header .header_title h1{
+        font-size: 30px;
+    }
+    section h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
 </style>
