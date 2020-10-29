@@ -1,6 +1,13 @@
 <template>
     <section class="portfolio" id="skill">
         <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <h1>
+                  Наши работы
+                </h1>
+              </div>
+            </div>
             <swiper class="swiper" :options="swiperOption">
                 <swiper-slide v-for="(n, i) in card" :key="n._id">
                   <a :href="n.link" class="wrapper">
@@ -47,6 +54,12 @@
 <style>
 section.portfolio{
     padding: 100px 0;
+}
+section h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
 }
   .swiper {
     height: 600px;

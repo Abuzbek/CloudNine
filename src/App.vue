@@ -4,6 +4,7 @@
     <Header/>
     <Skill/>
     <Portfolio/>
+    <Team/>
   </div>
 </template>
 
@@ -12,12 +13,14 @@ import Navbar from './components/Navbar.vue'
 import Header from './components/Header.vue'
 import Skill from './components/Skill.vue'
 import Portfolio from './components/Portfolio.vue'
+import Team from './components/Team.vue'
+
 
 
 export default {
   name: 'App',
   components: {
-    Navbar,Header,Skill,Portfolio
+    Navbar,Header,Skill,Portfolio,Team
   },
   data () {
     return {
