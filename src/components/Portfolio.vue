@@ -121,4 +121,10 @@ section h1{
        border: 2px solid #2824EA;
        background: #eee;
    }
+   @media (max-width:500px){
+      .swiper-pagination .swiper-pagination-bullet{
+        width: 20px !important;
+        height: 20px !important;
+      }
+   }
 </style>

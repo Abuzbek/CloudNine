@@ -5,8 +5,27 @@
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="black-text text-black">=</span>
     </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav" style="margin:0;">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cards" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#team" class="nav-link">Team</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div  id="navbarSupportedContent">
+         <ul class="navbar-nav" style="margin:0;">
           <li class="nav-item">
             <a href="#home" class="nav-link active">Home</a>
           </li>
@@ -68,6 +87,10 @@ export default {
             scrollTop: target,
         }, 1000);
     });
+    $('.navbar-toggler').click(function(){
+      let attrib = $(this).attr('data-target')
+      $(attrib).toggleClass('active')
+    })
   }
 }
 </script>
@@ -87,5 +110,29 @@ export default {
   background: rgba(255, 255, 255, 0.9);
   transition: 1s;
 }
-
+#navbarSupportedContent{
+  position: fixed;
+  left: -100%;
+  top: 83px;
+  bottom: 0;
+  height: 100%;
+  width: 60%;
+  background: rgba(255, 255, 255,0.9 );
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#navbarSupportedContent.active{
+  left: 0%;
+}
+#navbarSupportedContent .navbar-nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column !important;
+  padding-top:70px;
+  padding-left: 40px;
+}
+#navbarSupportedContent .navbar-nav .nav-link{
+  width: 100%;
+  padding: 20px !important;
+}
 </style>
