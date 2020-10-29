@@ -1,52 +1,80 @@
 <template>
-    <section id="cards">
-        <div class="container">
+    <section class="portfolio" id="portfolio">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
-                   <h1>Сдаелаем Ваш проект уникальным и качественным </h1> 
-                </div>
-                <div class="col-lg-3 col-md-6" v-for="(n, i) in card" :key="n._id" :name="i">
-                    <div class="card text-center mb-4">
-                        <div class="card-top">
-                            <h3>{{ n.heading }}</h3>
-                        </div>
-                        <div class="card-img">
-                            <img :src="n.img" alt="">
-                        </div>
-                        <div class="card-body">
-                            <p>{{ n.title }}</p>
-                            <a href="#!" class="btn btn-outline-primary">Заказать</a>
-                        </div>
-                    </div>
-                </div>
+              <div class="col-12">
+                <h1>
+                  Bizning ishimiz:
+                </h1>
+              </div>
             </div>
+            <swiper class="swiper" :options="swiperOption">
+                <swiper-slide v-for="(n, i) in card" :key="n._id">
+                  <a :href="n.link" class="wrapper">
+                    <img :src="n.img" :alt="i">
+                  </a>
+                </swiper-slide>
+                <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
         </div>
     </section>
 </template>
 
 <script>
-// import $ from 'jquery'
-import Swiper from 'swiper'
-import Swiper from 'swiper'
-export default {
-  name: 'Skill',
-  data(){
-      return{
-        card: card,
+  import swiperCore, {Pagination} from 'swiper'
+  import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+  import '../assets/css/swiper.css'
+  import { mapGetters } from 'vuex'
+  swiperCore.use([Pagination])
+  export default {
+    name: 'Portfolio',
+    components: {
+      Swiper,
+      SwiperSlide
+    },
+    computed: mapGetters(['card']),
+    mounted () {
+      this.$store.dispatch('fetchCard')
+    },
+    data() {
+      return {
+        swiperOption: {
+          slidesPerView: 3,
+          slidesPerColumn: 3,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          breakpoints: {
+            1024: {
+              slidesPerView: 3,
+              slidesPerColumn: 2,
+            },
+            768: {
+              slidesPerView: 2,
+              slidesPerColumn: 2,
+              centeredSlides: true,
+            },
+            640: {
+              slidesPerView: 2,
+              slidesPerColumn: 2,
+              centeredSlides: true,
+            },
+            320: {
+              slidesPerView: 1,
+              slidesPerColumn: 2,
+              centeredSlides: true,
+            }
+          }
+        }
       }
-  },
-  mounted () {
+    }
   }
-}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-section{
-    width: 100%;
-    background: linear-gradient(180deg, rgba(224, 223, 255, 0.8) 0%, rgba(236, 236, 255,
-     0.5) 100%);
-     padding: 100px 0;
+<style>
+section.portfolio{
+    padding: 100px 0;
 }
 section h1{
     font-size: 36px;
@@ -54,33 +82,53 @@ section h1{
     margin-bottom: 40px;
     text-align: center;
 }
-.card{
-    border-radius: 10px;
-    padding: 15px 10px;
-    transition: 0.5s;
-}
-.card:hover{
-    transform: scale(1.05);
-    transition: 0.5s;
-
-}
-.card .btn {
-    border-radius: 10em !important;
-    padding: 10px 30px;
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
-}
-.card .btn:focus {
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15) !important;
-}
-.card h3{
-    font-size: 24px;
-    margin-bottom: 25px;
-    font-weight: 600;
-}
-.card img{
-    margin-bottom: 25px;
-}
-.card p{
-    margin-bottom:25px;
-}
+  .swiper {
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+      height: 270px;
+      background: #eee;
+      border: 1px solid rgb(119, 34, 34);
+   }
+   .swiper-slide .wrapper img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: .3s ease-in-out;
+   }
+   .swiper-slide .wrapper{
+     display: block;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+   }
+   .swiper-slide .wrapper:hover img{
+     transform: scale(1.3) rotate(15deg);
+   }
+   .swiper-pagination{
+       align-items: center;
+   }
+   .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+       transition: 0.3s;
+       width: 20px !important;
+       height: 20px !important;
+       background: #2824EA;
+   }
+   .swiper-pagination .swiper-pagination-bullet{
+       width: 100px !important;
+       opacity: 1;
+       height: 20px !important;
+       border-radius: 10em !important;
+       transition: 0.3s;
+       border: 2px solid #2824EA;
+       background: #eee;
+   }
+   @media (max-width:500px){
+      .swiper-pagination .swiper-pagination-bullet{
+        width: 20px !important;
+        height: 20px !important;
+      }
+   }
 </style>
