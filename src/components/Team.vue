@@ -4,7 +4,8 @@
           <div class="row">
                <div class="col-12">
                 <h1>
-                  Наша команда
+                  Bizning jamoamiz
+                  <h4 class="mt-4">Kuchli jamoa va halol mehnat: <span class="text-primary">Cloud9</span>  siz bilan!</h4>
                 </h1>
               </div>
             </div>
@@ -35,8 +36,8 @@
   const team = [
     {
       img:'https://www.aii-group.com/wp-content/uploads/2019/09/Trivan-Mathur.jpg',
-      teamName: 'Abdumannon Tojiboev',
-      work: 'Full stack developer'
+      teamName: 'Sardorbek Ahmadaliyev',
+      work: 'Company Director'
     },
     {
       img:'https://www.alhaya-medical.com/wp-content/uploads/2017/11/team-member-3.jpg',
@@ -45,14 +46,19 @@
     },
     {
       img:'https://selexis.com/wp-content/uploads/2018/09/Severine_Fagete-350x350-2018SEP14.jpg',
-      teamName: 'Abdumannon Tojiboev',
-      work: 'Full stack developer'
+      teamName: 'Lara Popins',
+      work: 'Front-end Developer'
     },
     {
       img:'https://www.alhaya-medical.com/wp-content/uploads/2017/11/team-member.jpg',
       teamName: 'Abdumannon Tojiboev',
-      work: 'Full stack developer'
-    }
+      work: 'Backend Developer'
+    },
+    {
+      img:'https://i.imgur.com/HTb2oMH.png',
+      teamName: 'Abdumannon Tojiboev',
+      work: 'Design'
+    },
   ]
   export default {
     name: 'Header',
@@ -69,6 +75,20 @@
           pagination: {
             el: '.swiper-pagination',
             clickable: true
+          },
+          breakpoints: {
+            1024: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            320: {
+              slidesPerView: 1,
+            }
           }
         }
       }
@@ -119,16 +139,32 @@
       width: 33%;
       height: auto !important;
       transform: scale(.8);
-      transition: 1s ease-in-out;
+      transition: 0.3s ease-in-out;
       background: transparent !important;
       border: none !important;
     }
+    .swiper-slide h3,.swiper-slide p{
+      opacity:0;
+      transform:translateY(100px);
+      transition: 0.6s ease-in-out;
+    }
     .swiper-slide.swiper-slide-active{
       transform: scale(1);
-      transition: 1s ease-in-out;
+      transition: 0.3s ease-in-out;
 
+    }
+    .swiper-slide.swiper-slide-active h3,.swiper-slide.swiper-slide-active p{
+      opacity:1;
+      transform:translateY(0px);
+      transition: 0.6s ease-in-out;
     }
    .swiper-pagination .swiper-pagination-bullet{
        width: 80px !important;
+   }
+   @media (max-width:768px) {
+     .swiper-slide {
+      width: 50%;
+      transform: scale(1);
+    }
    }
 </style>

@@ -3,7 +3,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                   <h1>Сдаелаем Ваш проект уникальным и качественным </h1> 
+                   <h1>Sizning loyihangizni noyob va yuqori sifatda bajarib beramiz!
+                       <h3 class="mt-4">Xizmatlarimiz:</h3> 
+                        </h1> 
                 </div>
                 <div class="col-lg-3 col-md-6" v-for="(n, i) in card" :key="n._id" :name="i">
                     <div class="card text-center mb-4">
@@ -15,7 +17,7 @@
                         </div>
                         <div class="card-body">
                             <p>{{ n.title }}</p>
-                            <a href="#!" v-ripple class="btn btn-outline-primary">Заказать</a>
+                            <a href="#!" v-ripple class="btn btn-outline-primary">Buyurtma berish</a>
                         </div>
                     </div>
                 </div>
@@ -34,29 +36,29 @@ const card = [
   {
     _id:'1',
     img: require('../assets/cardSvg/card2.svg'),
-    heading:'Веб-сайты',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis ',
+    heading:'Veb saytlar',
+    title: "Veb sayt yaratuvchi - faoliyatingiz haqida foydalanuvchilarga zarur barcha ma'lumotlarning elektron bazasi sifatida platforma yaratish bilan shug'ullanadi",
     price: 'от 1000 $'
   },
   {
     _id:'2',
     img: require('../assets/cardSvg/card3.svg'),
-    heading:'Приложения',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis ',
+    heading:'Android',
+    title: "Android ustasi - turli aloqa vositalari: planshet, smartfonlar, soatlar va raqamli media playerlarida ishlatiladigan turli Android operatsion tizimlarini yaratish uning vazifasi",
     price: 'от 1000 $'
   },
   {
     _id:'3',
     img: require('../assets/cardSvg/card1.svg'),
-    heading:'Телеграм боты',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis ',
+    heading:'Telegram botlar',
+    title: "Telegram bot yaratuvchi -  O'zbekiston miqyosida onlayn biznes faoliyatida eng ko'p foydalaniladigan messenjer - Telegramdagi xabar almashinuv ishlaringizni avtomatlashtirib berish uning vazifasi",
     price: 'от 1000 $'
   },
   {
     _id:'4',
     img: require('../assets/cardSvg/card4.svg'),
-    heading:'SEO оптимизация',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis ',
+    heading:'SEO optimizatsiya',
+    title: "SEO optimizatsiyasi ustasi - qidiruv tizimlarida saytingizni yuqori o'rinni egallashini ta'minlashga erishishda yordamchi",
     price: 'от 1000 $'
   },
 ] 
@@ -100,10 +102,9 @@ section h1{
 .card .btn {
     border-radius: 10em !important;
     padding: 10px 30px;
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
 .card .btn:focus {
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15) !important;
+    box-shadow:none !important;
 }
 .card h3{
     font-size: 24px;

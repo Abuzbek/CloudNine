@@ -1,9 +1,11 @@
 <template>
-  <nav id="nav" class="navbar fixed-top">
+  <nav id="nav" class=" navbar-expand-lg navbar fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#"><img width="100px" :src="require('../assets/nine.png')" alt=""></a>
-      <!-- <button data-target="#collapseNav"></button> -->
-      <div class="navbar-collapse" id="collapseNav">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="black-text text-black">=</span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav" style="margin:0;">
           <li class="nav-item">
             <a href="#home" class="nav-link active">Home</a>
@@ -12,10 +14,10 @@
             <a href="#cards" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#skill" class="nav-link">Skills</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#team" class="nav-link">Team</a>
           </li>
           <li class="nav-item">
             <a href="#contact" class="nav-link">Contact Us</a>
@@ -85,4 +87,5 @@ export default {
   background: rgba(255, 255, 255, 0.9);
   transition: 1s;
 }
+
 </style>

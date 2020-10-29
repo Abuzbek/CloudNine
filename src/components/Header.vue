@@ -20,19 +20,19 @@
           <div class="row">
               <div class="col-lg-6">
                   <div class="header_title">
-                      <h1>Мы <span>креативная</span> веб-студия</h1>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non </p>
-                      <button v-ripple class="btn btn-primary">Начать проект</button>
+                      <h1>Biz <span>ijodiy</span> <br> veb-studiyamiz!</h1>
+                      <p> <span class="text-primary">CloudNine</span> - ulkan maqsadli, o'zaro manfaatli hamkorlikni taklif qilayotgan ishonchli IT kompaniyasi! </p>
+                      <button v-ripple class="btn btn-primary">Buyurtma berish</button>
                       <div class="social">
                         <div class="phone d-flex align-items-center">
                           <a class="btn-floating btn-sm btn-ph waves-effect waves-light" type="button" role="button"><i  style="transform:rotateY(180deg);" class="fas fa-phone"></i></a>
                           <a href="tel:+998990395709" class="phone">+998 99 039 57 09</a>
                       </div>
-                       <div class="phone d-flex align-items-center">
-                          <a class="btn-floating btn-sm btn-tw waves-effect waves-light" type="button" role="button"><i class="fab fa-youtube"></i></a>
-                          <a class="btn-floating btn-sm btn-fb waves-effect waves-light" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
-                          <a class="btn-floating btn-sm btn-tg waves-effect waves-light" type="button" role="button"><i class="fab fa-telegram-plane"></i></a>
-                          <a class="btn-floating btn-sm btn-in waves-effect waves-light" type="button" role="button"><i class="fab fa-instagram"></i></a>
+                       <div class="socialIcon mt-2 d-flex align-items-center">
+                          <a v-ripple class="btn-floating btn-sm btn-tw waves-effect waves-light" type="button" role="button"><i class="fab fa-youtube"></i></a>
+                          <a v-ripple class="btn-floating btn-sm btn-fb waves-effect waves-light" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
+                          <a v-ripple class="btn-floating btn-sm btn-tg waves-effect waves-light" type="button" role="button"><i class="fab fa-telegram-plane"></i></a>
+                          <a v-ripple class="btn-floating btn-sm btn-in waves-effect waves-light" type="button" role="button"><i class="fab fa-instagram"></i></a>
                       </div>
                       </div>
                       
@@ -91,9 +91,9 @@ header .cloud_absolute{
     left: 40px;
 }
 header .header_title h1 {
-    font-size: 50px;
+    font-size: 60px;
     line-height: 76px;
-    font-weight: 700;
+    font-weight: 800;
     color:#2a2a2a;
 }
 header .header_title h1 span{
@@ -102,7 +102,6 @@ header .header_title h1 span{
 header .header_title .btn {
     border-radius: 10em !important;
     padding: 10px 20px;
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
 header .header_title .btn:focus {
     outline: none !important;
@@ -126,7 +125,6 @@ header .header_title p {
     cursor: pointer;
     border-radius: 50%;
     /* -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15); */
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     width: 47px;
@@ -136,13 +134,14 @@ header .header_title p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36.15385px;
-    height: 36.15385px;
+    width: 45px;
+    height: 45px;
     font-size: .875rem;
     line-height: 1.5;
 }
 .btn-floating i{
     color: white !important;
+    font-size: 18px;
 }
 .btn-ph {
     background-color: #0efb06 !important;
@@ -163,7 +162,7 @@ header .header_title div.phone{
     margin-top: 30px;
 }
 header .header_title .phone a.phone{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     color: #2a2a2a;
 }

@@ -1,10 +1,10 @@
 <template>
-    <section class="portfolio" id="skill">
+    <section class="portfolio" id="portfolio">
         <div class="container-fluid">
             <div class="row">
               <div class="col-12">
                 <h1>
-                  Наши работы
+                  Bizning ishimiz:
                 </h1>
               </div>
             </div>
@@ -40,10 +40,27 @@
       return {
         swiperOption: {
           slidesPerView: 3,
-          slidesPerColumn: 2,
           pagination: {
             el: '.swiper-pagination',
             clickable: true
+          },
+          breakpoints: {
+            1024: {
+              slidesPerView: 3,
+              slidesPerColumn: 2,
+            },
+            768: {
+              slidesPerView: 2,
+              slidesPerColumn: 3,
+            },
+            640: {
+              slidesPerView: 2,
+              slidesPerColumn: 3,
+            },
+            320: {
+              slidesPerView: 1,
+              slidesPerColumn: 4,
+            }
           }
         }
       }

@@ -43,6 +43,9 @@ export default {
     padding: .5rem 1rem !important;
     color: #2a2a2a;
 }
+.collapse.navbar-collapse{
+  transition: 1s !important;
+}
 .nav-link.active {
     font-weight: 700;
 }
